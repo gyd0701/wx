@@ -1,0 +1,29 @@
+<!--pages/address/address.wxml-->
+<view class="add" >
+  <view class="add-list">
+    <view wx:for="{{menuitems.data}}" wx:key="item">
+        <view class='item'>
+          <image wx:if="{{item.isdefault==0}}" class='add-image' src="/img/iconH/选择1.png" ></image>
+          <image wx:else class='add-image' src="/img/iconH/选择2.png"></image>
+          <text class="add-text-name">姓名:{{item.name}}</text>
+          <text class="add-text-mobile">手机号码:{{item.mobile}}</text>
+          <text class="add-text-detail">地址:{{item.detail}}</text>
+          <image class='address-array' src="/img/iconH/编写.png" bindtap="updatatap" data-add="{{item}}"></image>
+        </view>
+        <view class="div-line"></view>
+    </view>
+  </view>
+        <view>
+         <view wx:if="{{length==0}}" class='address' bindtap = "defaultAddre">
+          <image class='address-image' src="/img/iconH/定位.png"></image>
+          <text class="address-text">点击获取默认地址</text>
+          </view>
+          <view wx:else class='address' bindtap = "insertAddre">
+          <image class='address-image' src="/img/iconH/添加.png"></image>
+          <text class="address-text">新增收货地址</text>
+          <image class='address-array' src="/img/iconH/icon_right.png"></image>
+          </view>
+        </view>
+       
+</view>
+

@@ -1,0 +1,76 @@
+<!--pages/list/productDetails/productDetails.wxml-->
+<view class="contest">
+  <view class="lunbo">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="lunbo">
+    <block wx:for="{{product_img}}" wx:key="url">
+      <swiper-item>
+        <image src="{{baseurl}}{{item}}" class="slide-image" mode="aspectFit" data-src='{{baseurl}}{{item}}'></image>
+      </swiper-item>
+    </block>
+  </swiper> 
+  </view>
+
+  <view class="info-price clear">
+    <view class='price'>￥{{price}} 元 / {{unit}}</view>
+    <view class='fenxiang'>
+      <button class='fxbtn' open-type="share" style="margin-top: 15rpx; " >
+       <image src='/img/iconH/分享.png' class="foot_icon" ></image>
+        <view style="padding-top: 5rpx;">分享</view>
+      </button>
+    </view>
+    </view>
+<view class="info-title">
+    <text>{{pname}}</text>
+</view>
+ 
+<view style="border-top:1px solid #F6F6F6;background: #fff; padding:5px 15px;color:#A8A8A8">
+    <view class="clearfix flex grey gridXt">
+      <text class="sub"><block wx:if='{{goods_info.goods_yunfei==0.00}}'>运费：包邮</block><block wx:else>运费：1元</block></text>
+      <text class="sub">库存：{{stock}}</text>
+      <text class="sub">销量：{{random}} {{unit}}</text>
+    </view>
+</view>
+ <view class="div-line"></view>
+<!--商品详情-->
+<view class='details_box'>
+  <view class="spxq">
+     <view>商品详情</view>
+  </view>
+  <view style='padding:10px 0px;'>
+      <view class="wxParse">
+         <view wx:for="{{product_img}}" wx:key="item">
+        <view class='item'>
+          <image src="{{baseurl}}{{item}}" mode="aspectFit"></image>
+        </view>
+        <view class="div-line"></view>
+    </view>
+      </view>
+    </view>
+</view>
+ 
+<!--底部浮动 start-->
+<view class="foot-nav mt15">
+  <view class="flex con gridXt tc">
+    <view class="fast-links mr15 flex font12">
+      <view class="sub_foot" bindtap='shouye'>
+       <image src="/img/iconH/首页H.png" class="foot_icon"></image>
+        <text class="iconfont">首页</text>
+      </view>
+      <view class="sub_foot">
+       <button open-type="contact" class='fxbtn'>
+        <image src="/img/iconH/客服.png" class="foot_icon"></image>
+        <text class="iconfont">客服</text>
+       </button>
+      </view>
+      <view class="sub_foot" bindtap='gouwuche'>
+        <image src="/img/iconH/购物车H.png" class="foot_icon"></image>
+        <text class="iconfont">购物车</text>
+      </view>
+    </view>
+    <view class="add-cart font16">
+      <button class="add-cart-btn" bindtap='Addshop'>加入购物车</button>
+       <button class="add-cart-btn1" bindtap='buy'>立即购买</button>
+    </view>
+   </view>
+  </view>
+</view>

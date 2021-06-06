@@ -1,0 +1,142 @@
+<!--pages/user/ordermanagement/ordermanagement.wxml-->
+<!-- 切换栏 -->
+<view class="swiper-tab">
+  <block wx:for="{{swipertab}}" wx:key="sptab">
+    <view class="swiper-tab-list {{currtab == item.index ? 'on' : ''}}" data-current="{{item.index}}" bindtap="tabSwitch">{{item.name}}</view>
+  </block>
+</view>
+ 
+<swiper current="{{currtab}}" class="swiper-box" duration="300" style="height:{{deviceH-55}}px" bindchange="tabChange">
+  <!-- 完成 -->
+    <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true">
+      <view class="orderDetails" wx:for="{{waitPayOrder}}" wx:key="item">
+        <view class="orderListTitle">
+           <text class="userName">订单号：{{item.order_id}}</text>
+          <text class="orderStatus">已完成</text>
+        </view>
+        
+        <view class="productlist">
+          <block wx:for="{{item.productlist}}" wx:key="itemp">
+            <view class="product">
+              <image src="{{baseurl}}{{item.url}}"></image>
+              <view class="product_left">
+                <text class="product_name">{{item.pname}}</text>
+                <text style="font-size:14px;">¥ {{item.price}}</text>
+                <text class="product_quantity">x {{item.count}}</text>
+              </view>
+            </view>
+             <view class="div-line"></view>
+          </block>
+        </view>
+
+         <text class="productPrice" style="padding-left: 30rpx;">下单时间：{{item.create_time}}</text>
+      
+        <view class="productCount">
+          <view>
+          <text class="productPrice">共 {{item.total_count}} 件商品 合计：￥{{item.total_price}}（运费：{{item.freight}} 元）</text>
+          </view>
+        </view>
+       </view>
+    </scroll-view>
+  </swiper-item>
+  <!-- 待付款 -->
+  <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true">
+      <view class="orderDetails" wx:for="{{waitPayOrder}}" wx:key="item">
+        <view class="orderListTitle">
+           <text class="userName">订单号：{{item.order_id}}</text>
+          <text class="orderStatus">待付款</text>
+        </view>
+        
+        <view class="productlist">
+          <block wx:for="{{item.productlist}}" wx:key="itemp">
+            <view class="product">
+              <image src="{{baseurl}}{{item.url}}"></image>
+              <view class="product_left">
+                <text class="product_name">{{item.pname}}</text>
+                <text style="font-size:14px;">¥ {{item.price}}</text>
+                <text class="product_quantity">x {{item.count}}</text>
+              </view>
+            </view>
+              <view class="div-line"></view>
+          </block>
+        </view>
+
+         <text class="productPrice" style="padding-left: 30rpx;">下单时间：{{item.create_time}}</text>
+      
+        <view class="productCount">
+          <view>
+          <text class="productPrice">共 {{item.total_count}} 件商品 合计：￥{{item.total_price}}（运费：{{item.freight}} 元）</text>
+          <button class="gopay" bindtap="gopay">去付款</button>
+          </view>
+        </view>
+       </view>
+    </scroll-view>
+  </swiper-item>
+  <!-- 待发货 -->
+    <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true">
+      <view class="orderDetails" wx:for="{{waitPayOrder}}" wx:key="item">
+        <view class="orderListTitle">
+           <text class="userName">订单号：{{item.order_id}}</text>
+          <text class="orderStatus">待发货</text>
+        </view>
+        
+        <view class="productlist">
+          <block wx:for="{{item.productlist}}" wx:key="itemp">
+            <view class="product">
+              <image src="{{baseurl}}{{item.url}}"></image>
+              <view class="product_left">
+                <text class="product_name">{{item.pname}}</text>
+                <text style="font-size:14px;">¥ {{item.price}}</text>
+                <text class="product_quantity">x {{item.count}}</text>
+              </view>
+            </view>
+             <view class="div-line"></view>
+          </block>
+        </view>
+
+         <text class="productPrice" style="padding-left: 30rpx;">下单时间：{{item.create_time}}</text>
+      
+        <view class="productCount">
+          <view>
+          <text class="productPrice">共 {{item.total_count}} 件商品 合计：￥{{item.total_price}}（运费：{{item.freight}} 元）</text>
+          </view>
+        </view>
+       </view>
+    </scroll-view>
+  </swiper-item>
+  <!-- 待收货-->
+   <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true">
+      <view class="orderDetails" wx:for="{{waitPayOrder}}" wx:key="item">
+        <view class="orderListTitle">
+           <text class="userName">订单号：{{item.order_id}}</text>
+          <text class="orderStatus">待收货</text>
+        </view>
+        
+        <view class="productlist">
+          <block wx:for="{{item.productlist}}" wx:key="itemp">
+            <view class="product">
+              <image src="{{baseurl}}{{item.url}}"></image>
+              <view class="product_left">
+                <text class="product_name">{{item.pname}}</text>
+                <text style="font-size:14px;">¥ {{item.price}}</text>
+                <text class="product_quantity">x {{item.count}}</text>
+              </view>
+            </view>
+              <view class="div-line"></view>
+          </block>
+        </view>
+
+         <text class="productPrice" style="padding-left: 30rpx;">下单时间：{{item.create_time}}</text>
+         <button class="Confirm" bindtap="Confirm" data-order-id="{{item.order_id}}">确认收货</button>
+        <view class="productCount">
+          <text class="productPrice">共 {{item.total_count}} 件商品 合计：￥{{item.total_price}}（运费：{{item.freight}} 元）</text>
+        </view>
+       </view>
+    </scroll-view>
+  </swiper-item>
+ 
+</swiper>

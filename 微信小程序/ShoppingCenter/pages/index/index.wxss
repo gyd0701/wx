@@ -1,0 +1,117 @@
+/**index.wxss**/
+
+page{  padding: 0;  margin:0;  background: rgba(222, 224, 221, 0.5);}
+.head{
+  width:94% ;
+  height:160px;
+  display: block;
+  margin:10rpx auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* 设置swiper属性 */
+swiper{  display: inline;}
+/*设置图片属性*/
+.head_item image {  display: inline; }
+/*分割线样式*/
+.divLine{
+ background: rgba(224, 227, 218, 0.222);
+ width: 95%;
+ height: 5rpx;
+ margin: 30rpx auto;
+}
+.caption{  padding-left: 30rpx;}
+/*搜索栏*/
+.search{
+  display:block;
+  background-color: rgb(217, 2, 2);
+  border-radius: 30rpx;
+  width: 94%;
+  margin: 0 auto;
+  text-align: center;
+  height: 60rpx;
+}
+.search_arlet{
+  display: block;
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 12rpx;
+  height: 48rpx;
+}
+.searchcion{width: 20%;display: block;float: left;margin:5rpx 0 0 25%;}
+.search_text{display: block;width: 50%;float: left;text-align: left;color: #fff;}
+
+/*商品分类 */
+.category{
+  display: block;
+  height: 550rpx;
+  width: 96%;
+  margin: 10rpx auto;
+  border-radius: 10px;
+
+}
+.citem{
+  width: 49%;
+  height: 50%;
+  background: #fff;
+  display: block;
+  float: left;
+  border: #E0E3DA 1rpx solid;
+  position: relative;
+}
+.cimage{  height: 180rpx;  width: 100%; position: absolute;  bottom: 0;}
+.c_item_top{height: 30%; }
+.cname{font-size: 13px; font-weight: bold; display:inline-block;margin: 10rpx 0 0 10rpx; width: 100%;}
+.cextend{font-size: 13px; color: #504d4d; display: inline-block;margin:0 0 5rpx 10rpx;width: 100%;}
+.mrtj{margin-top:5rpx;width: 100%;height: 140rpx;display: inline-block;overflow: hidden}
+.conter{
+  width:100% ;
+  height: 100%;
+  display: block;
+  margin:5rpx auto;
+  background-color: #dbdbdb;
+}
+.pitem{
+  width: 48%;
+  height: 390rpx;
+  display: block;
+  float: left;
+  border-radius: 10rpx;
+  overflow: hidden;
+  background-color: #fff;
+  margin:10rpx 0 5rpx 2%;
+  position: relative;
+}
+.pimage{
+  height: 280rpx;
+  width: 96%;
+}
+.pname{font-size: 14px;  width: 90%; margin: 0 auto;  display: block;  }
+.p_item_foot{width: 100%;display: block;  position:absolute;  bottom: 10rpx ;}
+.pprice{width:200rpx; position: absolute;  left: 25rpx;  bottom: 0;  }
+.foot_icon{
+  width: 150rpx;
+  height: 50rpx;
+  display: inline-block;
+  position:absolute; 
+  right: 15rpx;
+  bottom: 0;  
+  background: red;
+  color: #fff;
+  font-size: 12px; 
+  line-height: 50rpx; 
+  padding: 0;}
+.countDownTimeView{
+display: inline-block;
+background: linear-gradient(to right, hsla(10, 68%, 49%, 0.847), #e91e0bfa);
+width: 100%;
+height: 50rpx;
+line-height: 50rpx;
+text-align: center;
+color: #fff;
+position: absolute;
+top: 230rpx;
+left: 0;
+  }

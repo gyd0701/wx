@@ -1,0 +1,51 @@
+/**app.wxss**/
+container .icon-biaoqingwunai3{
+  font-size: 50px;
+  color: #363636;
+}
+.border-b{border-bottom:1px solid #e4e4e4;}
+.ai-center{align-items: center;}
+.flex{display: flex;}
+.font12{font-size: 12px;}
+.font13{font-size: 13px;}
+.font14{font-size: 14px; padding-left: 40rpx}
+.font15{font-size: 15px;}
+.font16{font-size: 16px;}
+.font18{font-size: 18px;}
+.font20{font-size: 20px;}
+.font22{font-size: 22px;}
+.font24{font-size: 24px;}
+.font26{font-size: 26px;}
+.font28{font-size: 28px;}
+.font30{font-size: 30px;}
+.font-b{font-weight: bold;}
+.flex1{flex:1;}
+.color-fff{color: #fff;}
+
+.bg-fff{background: #ffffff;}
+.ml20{margin-left: 20rpx;}
+/*swtich样式-start*/
+/*swtich整体大小*/
+.wx-switch-input{
+  width:82rpx !important;
+  height:40rpx !important;
+}
+/*白色样式（false的样式）*/
+.wx-switch-input::before{
+  width:80rpx !important;
+  height: 36rpx !important;
+}
+/*绿色样式（true的样式）*/
+.wx-switch-input::after{
+  width: 40rpx !important;
+  height: 36rpx !important;
+}
+.ipt-wrap:last-child{
+  border-bottom:none;
+}
+/*swtich样式end*/
+.region{
+  width: 500rpx;
+  position: absolute;
+  left: 150rpx;
+}
