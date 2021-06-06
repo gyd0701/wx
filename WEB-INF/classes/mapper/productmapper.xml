@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace:填写映射当前的Mapper接口，所有的增删改查的参数和返回值类型，
+		就可以直接填写缩写，不区分大小写，直接通过方法名去找类型-->
+<mapper namespace="com.xfu.mapper.IProductMapper">
+    <insert id="saveAllProduct" parameterType="com.xfu.entity.Product">
+    INSERT into
+      tb_product(p_id,pname,price,unit,stock,category_id)
+    VALUES
+      <foreach collection="productList" open="(" close=")" separator="),(" item="item">
+
+        #{item.p_id},#{item.pname},#{item.price},#{item.unit},#{item.stock},#{item.category_id}
+      </foreach>
+    </insert>
+
+
+    <insert id="saveAllProduct_img" parameterType="com.xfu.entity.Product_image">
+        INSERT into
+        tb_product_image(url,product_id,sequence)
+        VALUES
+        <foreach collection="product_imgList" open="(" close=")" separator="),(" item="item">
+
+           #{item.url},#{item.product_id},#{item.sequence}
+        </foreach>
+    </insert>
+
+    <select id="findOneProduct" resultType="com.xfu.entity.ProductDetails">
+      SELECT  * FROM  tb_product p,tb_product_image img WHERE p.p_id=img.product_id and p.p_id=#{product_id}
+
+    </select>
+
+    <select id="findAllProduct" resultType="com.xfu.entity.ProductDetails">
+        SELECT  * FROM  tb_product p,tb_product_image img WHERE p.p_id=img.product_id and p.category_id=#{categoryId} AND img.sequence=6
+
+    </select>
+
+
+    <select id="findMrtjList" resultType="com.xfu.entity.ProductDetails">
+        SELECT  * FROM  tb_product p,tb_product_image img WHERE p.p_id=img.product_id and  img.sequence=6 ORDER BY  RAND() LIMIT 6
+
+    </select>
+
+    <select id="searchProduct" resultType="com.xfu.entity.ProductDetails">
+        SELECT  * FROM  tb_product p,tb_product_image img WHERE p.p_id=img.product_id and  img.sequence=6 AND p.pname LIKE  CONCAT(CONCAT('%',#{store},'%'))
+
+    </select>
+
+    <delete id="deleteOneById"  >
+        DELETE FROM tb_product WHERE p_id =#{p_id}
+    </delete>
+
+    <select id="getProductCount" resultType="Integer">
+
+        SELECT COUNT(*) FROM tb_product
+    </select>
+
+    <select id="selectAllProduct" resultType="com.xfu.entity.ProductDetails">
+select p.p_id,img.url,p.pname,p.price,p.stock from (select url,product_id from tb_product_image i where i.sequence=6 ) img join tb_product p  on p.p_id=img.product_id LIMIT #{offset}, #{limit}
+    </select>
+
+</mapper>
