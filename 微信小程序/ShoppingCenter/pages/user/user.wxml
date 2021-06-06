@@ -1,0 +1,62 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button class="loginbutton" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+    <block wx:else>
+      <image  class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+   <view class="list-wrapper">
+
+  
+       <navigator url="/pages/user/ordermanagement/ordermanagement" class="list-item" hover-class="list-item_active">
+        <view class='item'>
+          <image class='item-image' src="/img/iconH/icon_right.png"></image>
+          <text class="item-text">我的订单</text>
+          <image class='item-array' src="/img/iconH/icon_right.png"></image>
+        </view>
+        <view class="div-line"></view>
+        </navigator>
+
+         <navigator url="/pages/address/address" class="list-item" hover-class="list-item_active">
+        <view class='item'>
+          <image class='item-image' src="/img/iconH/icon_right.png"></image>
+          <text class="item-text">收货地址</text>
+          <image class='item-array' src="/img/iconH/icon_right.png"></image>
+        </view>
+        <view class="div-line"></view>
+        </navigator>
+
+         <button class="list-item" hover-class="list-item_active" open-type="contact">
+          <view class='item'>
+          <image class='item-image' src="/img/iconH/icon_right.png"></image>
+          <text class="item-text">联系商家</text>
+          <image class='item-array' src="/img/iconH/icon_right.png"></image>
+        </view>
+        <view class="div-line"></view>
+
+        </button>
+         <button class="list-item" hover-class="list-item_active" open-type="feedback">
+          <view class='item'>
+          <image class='item-image' src="/img/iconH/icon_right.png"></image>
+          <text class="item-text">反馈意见</text>
+          <image class='item-array' src="/img/iconH/icon_right.png"></image>
+        </view>
+        <view class="div-line"></view>
+        </button>
+
+        <navigator url="aboutus/aboutus" class="list-item" hover-class="list-item_active">
+        <view class='item'>
+          <image class='item-image' src="/img/iconH/icon_right.png"></image>
+          <text class="item-text">关于我们</text>
+          <image class='item-array' src="/img/iconH/icon_right.png"></image>
+        </view>
+        <view class="div-line"></view>
+        </navigator>
+
+    </view>
+  
+</view>
+

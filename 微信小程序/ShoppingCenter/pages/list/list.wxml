@@ -1,0 +1,31 @@
+<!--pages/list/list.wxml-->
+<view class="body">
+<view class="head">
+<image src="/img/lunbo/yuandan.jpg" mode="scaleToFill"></image>
+</view>
+
+  <view class="container">
+   <scroll-view scroll-x="true" bindscroll="scroll"  scroll-with-animation="true">
+    <block wx:for="{{category.data}}" wx:key="item">
+    <view class="item" bindtap="findproductlist" data-category-id="{{item.id}}">
+    <text class="container-name">{{item.name}}</text>
+    </view>
+    </block>
+    </scroll-view>
+  </view>
+  <!--商品展示-->
+  <view class="conter">
+     <scroll-view scroll-y>
+    <block wx:for="{{productlist.data}}" wx:key="item">
+    <view class="pitem" bindtap="product" data-product-id="{{item.p_id}}">
+    <image src="{{baseurl}}{{item.url}}" class="pimage" mode="scaleToFill"></image>
+    <text class="pname">{{item.pname}}</text>
+    <view class="p_item_foot">
+     <text class="pprice">¥ {{item.price}}</text>
+     <image src="/img/iconH/添加r.png" class="foot_icon"></image>
+    </view>
+    </view>
+    </block>
+    </scroll-view>
+  </view>
+</view>

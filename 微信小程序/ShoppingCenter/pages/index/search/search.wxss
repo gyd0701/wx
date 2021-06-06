@@ -1,0 +1,136 @@
+page{
+  height: 100%;
+  background-color: #e2e1e16f;
+}
+.search{
+  display:block;
+  background-color: rgb(227, 223, 223);
+  border-radius: 30rpx;
+  width: 94%;
+  margin: 25rpx auto;
+  text-align: center;
+  height: 70rpx;
+}
+.search_arlet{
+  display: block;
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 17rpx;
+  height: 53rpx;
+}
+.searchcion{width: 20%;display: block;float: left;margin:5rpx 0 0 5%;}
+.search_text{display: block;width: 70%;height: 200rpx;float: left;text-align: left; }
+
+.Search_record_box{
+  height:90%;
+}
+.textSearch{
+  font-size: 28rpx;
+  color: #898989;
+  margin-left: 30rpx;
+  padding: 20rpx;
+}
+.Search_record_text{
+  width:92%;
+  height: 64rpx;
+  padding: 15rpx;
+  margin: 0px auto;
+   background-color: white
+}
+.Search_record_text>text {
+  font-size: 28rpx;
+  color: #898989;
+ 
+}
+.hot_box_text>text {
+  font-size: 28rpx;
+  color: #898989;
+  margin-left: 20rpx;
+}
+.hot_box_text {
+   margin-top: 40rpx;
+}
+.Search_record_text>image {
+  width: 44rpx;
+  height: 44rpx;
+  vertical-align: middle;
+  float: right;
+  margin-top: 5rpx;
+}
+.History-box{
+  width: 100%;
+}
+.History-list {
+  width: 90%;
+  margin: 10px auto
+}
+.History-list>text {
+  height: 65rpx;
+  border-radius: 5px;
+  background: #f5f5f5;
+  max-width: 100%;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  line-height: 65rpx;
+  font-size: 33rpx;
+  color: #393939;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  box-sizing: border-box;
+  margin-right: 20rpx;
+  float: left;
+}
+.qingk{
+  margin-left: 200rpx;
+}
+
+.container scroll-view{
+  width: 100%;
+  display: block;
+  padding: 0;
+  margin-top: 10rpx;
+  color:rgba(101, 97, 97, 0.68);
+}
+
+.item{
+  width:240rpx;
+  height:90rpx;
+  display:inline-block;
+  line-height: 90rpx;
+}
+.container-name{
+display: block;
+margin-top: 5rpx;
+text-align: center
+}
+.conter{
+  width:100% ;
+  height: 100%;
+  display: block;
+  margin:10rpx auto;
+  background-color: #dbdbdb;
+}
+.pitem{
+  width: 90%;
+  height: 280rpx;
+  display: block;
+  border-radius: 15rpx;
+  overflow: hidden;
+  background-color: #fff;
+  margin:10rpx auto;
+}
+.pimage{
+  display: block;
+  height: 270rpx;
+  width: 40%;
+  float: left;
+  margin:5rpx 5%;
+
+}
+.pname{font-size: 14px;  width: 80%; margin: 30rpx auto;  display:block;  }
+.p_item_foot{width:50%;display: block; float: left; height: 100%; position: relative}
+.pprice{width: 50%; float: left;margin-left:20rpx; position: absolute; left: 20rpx;  bottom:25rpx;color: red;  }
+.foot_icon{width: 50rpx;height: 50rpx;position: absolute;  right: 60rpx;  bottom:20rpx;  }

@@ -1,0 +1,59 @@
+/* pages/address/alteradd/alteradd.wxss */
+/*  */
+page{
+background-color: hsla(0, 0%, 65%, 0.2)
+}
+.ipt-wrap{
+  min-height: 100rpx;
+  line-height: 100rpx;
+  height: 120rpx;
+}
+.ml40{margin-left: 40rpx;}
+.jc-sb{justify-content: space-between;}
+.p30{padding: 30rpx;}
+.mt30{margin-top: 30rpx;}
+.mtp10{margin-top: 10rpx;
+padding: 30rpx 70rpx 30rpx 40rpx;
+
+}
+.p_rl40{padding:0  40rpx;}
+.ipt-wrap label{
+  min-width: 120rpx;
+}
+.icon-youjiantou{
+  position: relative;
+  top: 1rpx;
+}
+.textarea{
+  height: 100rpx;
+}
+.ipt-add{
+  min-height: 200rpx;
+  height: 200rpx;
+  padding-top: 10rpx
+}
+.p-tb30{padding: 30rpx 0;}
+.p_rl30{padding:10rpx  40rpx;}
+
+.lh10{line-height: 1;}
+._w100{width: 100%;}
+.combtn-1{
+  line-height: 120rpx;
+  height: 120rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  position: fixed;
+  bottom: 120rpx;
+  width: 100%
+}
+.bg-btn-1{background: linear-gradient(to right, hsl(40, 94%, 69%), #f1c56ee4);}
+.combtn-2{
+  line-height: 120rpx;
+  height: 120rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}
+.bg-btn-2{background: linear-gradient(to right, hsl(40, 87%, 34%), #efba4fe4);}

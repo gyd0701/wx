@@ -1,0 +1,65 @@
+/* pages/list/list.wxss */
+page{
+  padding: 0;
+  margin:0
+}
+.head{
+  width:94% ;
+  height:160px;
+  display: block;
+  margin:20rpx auto;
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+.head image{
+ display: inline; 
+}
+.container scroll-view{
+  width: 100%;
+  height: 90rpx;
+  display: block;
+  padding: 0;
+  margin-top: 10rpx;
+  color:rgba(101, 97, 97, 0.68);
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.item{
+  width:240rpx;
+  height:90rpx;
+  display:inline-block;
+  line-height: 90rpx;
+}
+.container-name{
+display: block;
+margin-top: 5rpx;
+text-align: center
+}
+.conter{
+  width:100% ;
+  height: 100%;
+  display: block;
+  margin:10rpx auto;
+  background-color: #dbdbdb;
+}
+.pitem{
+  width: 31%;
+  height: 350rpx;
+  display: block;
+  float: left;
+  border-radius: 10rpx;
+  overflow: hidden;
+  background-color: #fff;
+  margin:10rpx 0 10rpx 1.5%;
+  position: relative;
+}
+.pimage{
+  height: 200rpx;
+  width: 96%;
+}
+.pname{font-size: 14px;  width: 90%;  margin: 0 auto;  display: block;  }
+.p_item_foot{width: 100%;display: block;  position:absolute; bottom: 10rpx ;}
+.pprice{width: 50%; float: left;margin-left:20rpx;}
+.foot_icon{width: 50rpx;height: 50rpx;position: absolute;  right: 20rpx;  bottom: 5rpx;  }

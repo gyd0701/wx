@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/list/list",
+    "pages/shop/shop",
+    "pages/user/user",
+    "pages/logs/logs",
+    "pages/address/address",
+    "pages/address/alteradd/alteradd",
+    "pages/address/insertadd/insertadd",
+    "pages/productDetails/productDetails",
+    "pages/index/search/search",
+    "pages/orderform/orderform",
+    "pages/user/ordermanagement/ordermanagement",
+    "pages/user/aboutus/aboutus"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小商店",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "img/iconL/首页L.png",
+        "iconPath": "img/iconH/首页H.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "img/iconL/分类L.png",
+        "iconPath": "img/iconH/分类H.png",
+        "pagePath": "pages/list/list",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "img/iconL/购物车L.png",
+        "iconPath": "img/iconH/购物车H.png",
+        "pagePath": "pages/shop/shop",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "img/iconL/我的L.png",
+        "iconPath": "img/iconH/我的H.png",
+        "pagePath": "pages/user/user",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

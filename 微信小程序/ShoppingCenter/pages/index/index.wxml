@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container">
+
+<!-- 轮播图-->
+<view class="head">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{img}}" wx:key="item">
+      <swiper-item class="head_item">
+        <image src="{{item}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+  <!--搜索栏-->
+  <view class="search">
+      <view class="search_arlet">
+        <icon class="searchcion" size='15' type='search'></icon>
+        <input type='text' class="search_text" placeholder-style="color:#fff" placeholder="商品搜索" value="{{store}}" bindtap='searchInput'/>
+      </view>
+    </view>
+  <!--商品分类-->
+  <view class="category">
+      <block wx:for="{{categorylist.data}}" wx:key="item" >
+        <view class="citem" bindtap="category">
+          <view class="c_item_top">
+            <text class="cname">{{item.name}}</text>
+             <text class="cextend">{{item.extend}}</text>
+          </view>
+          <image src="{{baseurl}}{{item.img_url}}" class="cimage" mode="scaleToFill"></image>
+        </view>
+      </block>
+  </view>
+<!-- 商品展示-->
+<view class="hot_sale_products">
+    <image src="/img/lunbo/mrtj.jpg" class="mrtj"></image>
+
+    <view class="conter">
+     <scroll-view>
+    <block wx:for="{{mrtjplist.data}}" wx:key="item">
+    <view class="pitem" bindtap="product" data-product-id="{{item.p_id}}">
+    <image src="{{baseurl}}{{item.url}}" class="pimage" mode="scaleToFill"></image>
+      <view class="countDownTimeView">
+        <text>距结束：</text> 
+        <text class="voteText countDownTimeText">{{countDownHour}}</text> : 
+        <text class="voteText countDownTimeText">{{countDownMinute}}</text> : 
+        <text class="voteText countDownTimeText">{{countDownSecond}}</text>
+      </view>
+    <text class="pname">{{item.pname}}</text>
+    <view class="p_item_foot">
+     <text class="pprice">¥ {{item.price}} 元</text>
+     <button class="foot_icon" bindtap="addshop">立即抢购</button>
+    </view>
+    </view>
+    </block>
+    </scroll-view>
+  </view>
+</view>
+ 
+</view>

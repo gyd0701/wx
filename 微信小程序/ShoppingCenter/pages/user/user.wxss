@@ -1,0 +1,73 @@
+/* pages/user/user.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  padding-top:60rpx; 
+  height: 300rpx;
+  background: linear-gradient(to right, hsl(210, 85%, 69%), #80e7a2e4);
+}
+.loginbutton{
+  padding: 5rpx 60rpx;
+  margin-top: 60rpx;
+
+}
+.userinfo-avatar {
+  width: 140rpx;
+  height: 140rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: rgb(0, 0, 0);
+}
+
+.list-wrapper {
+  width: 100%;
+  margin-top: 70rpx;
+}
+
+/* 横着的分割View样式 */
+/*分割线样式*/
+.div-line{
+  background: #E0E3DA;
+  width: 100%;
+  height: 3rpx;
+}
+
+.list-item {
+  width: 100%;
+  height: 120rpx;
+}
+
+.list-item_active {
+  background-color: #E0E3DA;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 120rpx;
+}
+.item-text {
+  position: fixed;
+  left: 100rpx;
+  font-size: 30rpx;
+}
+.item-array {
+  position: fixed;
+  right: 70rpx;
+  font-size: 50rpx;
+  width: 40rpx;
+  height: 50rpx;
+}
+
+.item-image {
+  position: fixed;
+  left: 50rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+button{background-color: #fff;}

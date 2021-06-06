@@ -1,0 +1,64 @@
+<!--pages/orderform/orderform.wxml-->
+<view class="content">
+  <view class="orderadd">
+          <text class="add-text-name">收货人:{{add.name}}</text>
+          <text class="add-text-mobile">手机号码:{{add.mobile}}</text>
+          <text class="add-text-detail">地址:{{add.detail}}</text>
+          <image class='address-array' src="/img/iconH/编写.png" bindtap="updatatap" data-add="{{add}}"></image>
+       
+  </view>
+     <view class="div-line"></view>
+        <view class="productlist">
+          <block wx:for="{{productlist}}" wx:key="item">
+            <view class="product">
+              <image src="{{baseurl}}{{item.product_img}}"></image>
+              <view class="product_left">
+                <text class="product_name">{{item.pname}}</text>
+                <text style="color:red">¥ {{item.price}}</text>
+                <text class="product_quantity">x {{item.quantity}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+
+        <view class="orderform_title">
+          <text>优惠</text>
+          <text class="discount">暂无优惠 ></text>
+        </view>
+
+        <view class="orderform_title">
+          <text>配送方式（点击可选=>）</text>
+            <picker bind:change="bindChange" value="{{index}}" range="{{array}}" class="delivery_picker">
+             <view class="picker">
+              {{array[index]}}
+            </view>
+            </picker>
+        </view>
+
+        <view class="orderform_title">
+            <text>买家留言</text>
+           <textarea name="remark"  class="textarea" maxlength="30"></textarea>
+        </view>
+
+        <view class="pmoney">
+          <view class="orderform_title">
+            <text>商品金额</text>
+            <text class="order_title_right">¥ {{money}}</text>
+          </view>
+           <view class="orderform_title">
+            <text>运费</text>
+            <text class="order_title_right">+{{freight[index]}}</text>
+          </view>
+           <view class="orderform_title">
+            <text class="order_title_right">合计：¥ {{summoney}}</text>
+          </view>
+          <view class="orderform_title" style="background: #fff"></view>
+        </view>
+
+        <!-- 底部操作栏 -->
+    <view class="foot-nav mt15">
+    <!-- 总价 -->
+      <text class="foot_text">支付合计：￥{{summoney}}</text> 
+     <button class="add-cart-btn1" bindtap='pay'>提交订单</button>
+    </view>
+</view>

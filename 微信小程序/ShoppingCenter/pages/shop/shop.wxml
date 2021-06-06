@@ -1,0 +1,52 @@
+<!--pages/shop/shop.wxml-->
+ <view class="cart-box">
+    <view wx:if="{{!hasList}}" class="product_null">
+      <image src="/img/images/nulllshop.jpg"></image>
+      <text>购物车还是空的</text>
+      <text>赶紧买点东西犒劳下自己吧</text>
+       <button class="goindex" bindtap="goindex">去逛逛</button>
+    </view>
+    <!-- wx:for 渲染购物车列表 -->
+    <view wx:else class="shoplist">
+    <block wx:for="{{carts}}" wx:key="item">
+      <view  class="pitem">
+        <!-- wx:if 是否选择显示不同图标 -->
+        <icon class="p_icon" wx:if="{{item.selected}}" type="success" color="red" bindtap="selectList" data-index="{{index}}" />
+        <icon class="p_icon" wx:else type="circle" bindtap="selectList" data-index="{{index}}"/>
+        
+        <!-- 点击商品图片可跳转到商品详情 -->
+        <view bindtap="product" data-product-id="{{item.id}}">
+            <image class="pimage" src="{{baseurl}}{{item.product_img}}"></image>
+        </view>
+        
+        <text class="pname">{{item.pname}}</text>
+        <text class="pprice">￥{{item.price}}</text>
+        
+        <!-- 增加减少数量按钮 -->
+        <view class="p_item_foot">
+            <text class="minbin" bindtap="minusCount" data-index="{{index}}">-</text>
+            <text class="minbin">{{item.quantity}}</text>
+            <text class="minbin" bindtap="addCount" data-index="{{index}}">+</text> 
+            <text class="minbin_dele" bindtap="deleteList" data-index="{{index}}"> 删除 </text>
+        </view>
+        
+        <!-- 删除按钮 -->
+       
+      </view>  
+       </block>
+    </view> 
+  
+</view>
+
+<!-- 底部操作栏 -->
+<view class="foot-nav mt15">
+    <!-- wx:if 是否全选显示不同图标 -->
+    <view class="foot_left">
+    <icon class="foot_icon" wx:if="{{selectAllStatus}}" type="success" color="red" bindtap="selectAll"/>
+    <icon  class="foot_icon" wx:else type="circle"  bindtap="selectAll"/>
+    <text class="foot_text">全选</text>
+    <!-- 总价 -->
+      <text class="foot_text">合计：￥{{totalPrice}}</text> 
+      </view>
+     <button class="add-cart-btn1" bindtap='buy'>结算</button>
+</view>

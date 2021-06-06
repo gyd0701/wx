@@ -1,0 +1,39 @@
+/* pages/shop/shop.wxss */
+.foot-nav{position:fixed; height: 110rpx; left: 0; bottom: 0; right: 0; background: #fff;z-index:999;}
+.add-cart-btn1{background:linear-gradient(to right,rgb(250, 118, 118), rgb(243, 38, 49));color: #fff;width:230rpx;height:110rpx; line-height: 110rpx;  float: right }
+.foot_left{position: relative;width: 60%;float: left;line-height: 110rpx;}
+.foot_icon{width: 50rpx;height: 50rpx;float: left;margin:25rpx 0 0 25rpx ;}
+.foot_text{float: left; margin:0 20rpx;}
+.product_null{text-align: center;}
+.product_null text{display: inline-block;width: 100%;height: 30rpx;}
+.goindex{border: 1px red solid; width: 200rpx; height: 90rpx; line-height: 85rpx; margin: 20rpx auto;color: rgb(67, 66, 66);}
+/* 商品列表属性*/
+.pitem{
+  width: 90%;
+  height: 270rpx;
+  display: block;
+  border-radius: 15rpx;
+  overflow: hidden;
+  background-color: rgb(234, 232, 232);
+  margin:10rpx auto;
+  position: relative
+}
+.pimage{
+  display: block;
+  height: 240rpx;
+  width: 35%;
+  float: left;
+  margin:15rpx 12%;
+
+}
+.pname{font-size: 17px;  width: 80%; margin: 30rpx auto;  display:block;  }
+.pprice{width: 50%;margin:20rpx;}
+.p_icon{width: 50rpx;height: 50rpx;position: absolute;  left: 15rpx; bottom: 100rpx;  }
+.p_item_foot{display:block;width: 100%; margin-top: 30rpx;}
+.minbin{width: 45rpx; height: 45rpx; background-color: #a8a8a8;display: block;float: left;margin-left: 1rpx; text-align: center;}
+.minbin_dele{color: red; margin-left: 10rpx;}
+.shoplist{
+  display: block;
+  height: auto;
+  margin-bottom: 100rpx;
+}

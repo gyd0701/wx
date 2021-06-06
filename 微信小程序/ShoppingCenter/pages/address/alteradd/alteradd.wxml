@@ -1,0 +1,35 @@
+<!--pages/address/alteradd/alteradd.wxml-->
+<form bindsubmit="formSubmit" class="container">
+  <view class="bg-fff p-lr30 border-t">
+    <view class="ipt-wrap border-b flex ai-center">
+      <label  class="font14">{{name}}</label>
+      <input name="name" type="text" class="flex1" maxlength="4" value="{{add.name}}"></input>
+    </view>
+
+    <view class="ipt-wrap border-b flex ai-center">
+      <label  class="font14">{{mobile}}</label>
+      <input  name="mobile" type="number" class="flex1 font14" maxlength="11" value="{{add.mobile}}"></input>
+    </view>
+    <view class="ipt-add border-b  ai-center">
+      <text class="font14">{{detail}}</text>
+      <input name="detail" type="text" class="textarea _w100 .p_rl30 font14" maxlength="50" value="{{add.detail}}"></input>
+      
+    </view>
+  
+     <view class=".ipt-add border-b ai-center">
+      <textarea name="remark"  class="textarea _w100 mt30 p-rl40 font14" maxlength="50" value="{{add.remark}}"></textarea>
+    </view>
+</view>
+    <view class=" bg-fff flex ai-center jc-sb mtp10">
+      <view class="flex ai-center">
+      <label class="font14">设为默认地址</label>
+      </view>
+      <view class="flex">
+      <switch class="switch" checked="{{add.isdefault}}" bindchange="defaultChange" color="#279efd"></switch>
+      </view>
+    </view>
+ 
+    <button class="combtn-1 font18 color-fff  bg-btn-1" formType="submit">保存地址</button>
+    <button class="combtn-2 font18 color-fff  bg-btn-2"  bindtap="deladd" >删除地址</button>
+</form>
+

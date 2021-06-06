@@ -1,0 +1,44 @@
+<!--pages/index/search/search.wxml-->
+<view class="search">
+      <view class="search_arlet">
+        <icon class="searchcion" size='15' type='search'></icon>
+        <input class="text" focus="{{name_focus}}" placeholder-style="color:#a8a8a8" placeholder="请输入要查询的商品名称" data-store="{{inputValue}}" value="{{inputValue}}" bindinput='searchInput' bindconfirm="setSearchStorage" />
+      </view>
+    </view>
+  <!--搜索内容 -->
+<view class="contest">
+    <view wx:if="{{!isplistnull}}">
+      <scroll-view >
+      <block wx:for="{{searchllist}}" wx:key="item">
+      <view class="pitem" bindtap="product" data-product-id="{{item.p_id}}">
+      <image src="{{baseurl}}{{item.url}}" class="pimage" mode="scaleToFill"></image>
+      <view class="p_item_foot"> 
+      <text class="pname">{{item.pname}}</text>
+      <text class="pprice">¥ {{item.price}}</text>
+      <image src="/img/iconH/添加r.png" class="foot_icon" bindtap="addshop"></image>
+    </view>
+    </view>
+    </block>
+    </scroll-view>
+    </view>
+
+    <view wx:else>
+    <view class="textSearch">
+     
+    </view>
+   <view class="Search_record_box">
+    <view class="Search_record_text">
+      <text>历史搜索</text>
+      <image bindtap='clearSearchStorage' src='../../../img/iconH/清除.png'></image>
+    </view>
+    <view class="History-box">
+    <view class="History-list" wx:for="{{getSearch}}" wx:for-index="idx" wx:for-item="itemName" wx:key="idx" >
+      <text wx:if="{{itemName != ''}}" data-text="{{itemName}}" bindtap='this_value'>{{itemName}} </text>
+    </view>
+    </view>
+   </view>
+   </view>
+</view>
+    <modal class="modal" hidden="{{modalHidden}}" bindconfirm="modalChangeConfirm" bindcancel="modalChangeCancel">
+      <view class='qingk'>清空浏览记录</view>
+    </modal>
